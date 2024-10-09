@@ -80,15 +80,17 @@ cmaker {
             "-Werror",
             "-Wno-gnu-string-literal-operator-template",
         )
-        abiFilters("armeabi-v7a", "arm64-v8a", "x86", "x86_64", "riscv64")
+        abiFilters("arm64-v8a")
         cppFlags += flags
         cFlags += flags
     }
     buildTypes {
         when (it.name) {
             "debug", "release" -> {
-                arguments += "-DANDROID_STL=c++_shared"
+                arguments += "-DANDROID_STL=none"
+                arguments += "-DLSPLANT_STANDALONE=ON"
                 arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                arguments += "-DLSPLANT_BUILD_SHARED=OFF"
             }
             "standalone" -> {
                 arguments += "-DANDROID_STL=none"
