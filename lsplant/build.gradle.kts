@@ -94,6 +94,7 @@ cmaker {
                 arguments += "-DANDROID_STL=none"
                 arguments += "-DLSPLANT_STANDALONE=ON"
                 arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                arguments += "-DLSPLANT_BUILD_SHARED=OFF"
             }
         }
         arguments += "-DDEBUG_SYMBOLS_PATH=${project.layout.buildDirectory.file("symbols/${it.name}").get().asFile.absolutePath}"
