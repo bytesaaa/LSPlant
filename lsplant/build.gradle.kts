@@ -137,6 +137,7 @@ publish {
                 url = "https://github.com/LSPosed/LSPlant"
                 licenses {
                     license {
+                        
                         name = "GNU Lesser General Public License v3.0"
                         url = "https://github.com/LSPosed/LSPlant/blob/master/LICENSE"
                     }
